@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor">
+  <defs>
+    <linearGradient id="lotusGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E5D193"/>
+      <stop offset="50%" stop-color="#B5965A"/>
+      <stop offset="100%" stop-color="#8F6F33"/>
+    </linearGradient>
+    <linearGradient id="lotusRose" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F4E2E1"/>
+      <stop offset="100%" stop-color="#A85F67"/>
+    </linearGradient>
+  </defs>
+  <!-- Central Petal -->
+  <path d="M32 10 C27 24 25 36 32 50 C39 36 37 24 32 10 Z" fill="url(#lotusRose)" stroke="url(#lotusGold)" stroke-width="1.5" opacity="0.9"/>
+  <!-- Left Inner Petal -->
+  <path d="M30 18 C18 26 14 38 23 48 C28 38 30 28 30 18 Z" fill="url(#lotusRose)" stroke="url(#lotusGold)" stroke-width="1.5" opacity="0.8"/>
+  <!-- Right Inner Petal -->
+  <path d="M34 18 C46 26 50 38 41 48 C36 38 34 28 34 18 Z" fill="url(#lotusRose)" stroke="url(#lotusGold)" stroke-width="1.5" opacity="0.8"/>
+  <!-- Left Outer Petal -->
+  <path d="M24 28 C10 34 8 46 16 52 C22 46 24 38 24 28 Z" fill="url(#lotusRose)" stroke="url(#lotusGold)" stroke-width="1.5" opacity="0.7"/>
+  <!-- Right Outer Petal -->
+  <path d="M40 28 C54 34 56 46 48 52 C42 46 40 38 40 28 Z" fill="url(#lotusRose)" stroke="url(#lotusGold)" stroke-width="1.5" opacity="0.7"/>
+  <!-- Base Calyx -->
+  <path d="M16 52 C24 57 40 57 48 52 C42 56 22 56 16 52 Z" fill="url(#lotusGold)" stroke="url(#lotusGold)" stroke-width="1"/>
+  <circle cx="32" cy="38" r="2.5" fill="url(#lotusGold)"/>
+</svg>

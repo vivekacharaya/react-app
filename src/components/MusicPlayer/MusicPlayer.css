@@ -1,0 +1,75 @@
+.react-floating-controls {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.react-floating-btn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--color-warm-white, #FFFDFB);
+  border: 1.5px solid var(--color-gold, #C79A3B);
+  color: var(--color-deep-rose, #882233);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(61, 53, 50, 0.15);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+}
+
+.react-floating-btn:hover {
+  transform: scale(1.08) translateY(-2px);
+  background: var(--color-deep-rose, #882233);
+  color: #FFFDFB;
+  border-color: var(--color-deep-rose, #882233);
+  box-shadow: 0 8px 24px rgba(136, 34, 51, 0.3);
+}
+
+.react-floating-btn.is-playing {
+  background: var(--color-deep-rose, #882233);
+  color: #F7E7CE;
+  border-color: var(--color-gold, #C79A3B);
+}
+
+.react-music-waves {
+  position: absolute;
+  bottom: 6px;
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 10px;
+}
+
+.react-music-waves span {
+  width: 2px;
+  background: #F7E7CE;
+  border-radius: 1px;
+  animation: soundBarPulse 1s ease-in-out infinite alternate;
+}
+
+.react-music-waves span:nth-child(1) { height: 4px; animation-delay: 0.1s; }
+.react-music-waves span:nth-child(2) { height: 9px; animation-delay: 0.3s; }
+.react-music-waves span:nth-child(3) { height: 6px; animation-delay: 0.2s; }
+
+@keyframes soundBarPulse {
+  0% { height: 2px; }
+  100% { height: 9px; }
+}
+
+@media (max-width: 768px) {
+  .react-floating-controls {
+    bottom: 20px;
+    right: 20px;
+  }
+  .react-floating-btn {
+    width: 46px;
+    height: 46px;
+  }
+}

@@ -1,0 +1,45 @@
+:root {
+  /* Colors */
+  --color-ivory: #FFF9F3;
+  --color-warm-white: #FFFFFF;
+  --color-deep-red: #9E0F0F;
+  --color-dark-maroon: #6E1014;
+  --color-gold: #C79A3B;
+  --color-muted-rose: #B66B70;
+  --color-dark-text: #3A1717;
+  --color-rose: #A85F67;
+  --color-indian-gold: #B5965A;
+  --color-blush: #FFF0F5;
+  --color-warm-white: #FFFEFA;
+
+  /* Typography */
+  --font-script: 'Great Vibes', cursive;
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Outfit', sans-serif;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-2xl: 4rem;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.2);
+  --shadow-gold: 0 4px 12px rgba(199, 154, 59, 0.3);
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+}

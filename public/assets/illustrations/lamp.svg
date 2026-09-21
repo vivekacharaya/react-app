@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <radialGradient id="flameGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFE79A"/>
+      <stop offset="60%" stop-color="#FF9E00"/>
+      <stop offset="100%" stop-color="#A85F67" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="brassLamp" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F2DFAB"/>
+      <stop offset="50%" stop-color="#B5965A"/>
+      <stop offset="100%" stop-color="#735824"/>
+    </linearGradient>
+  </defs>
+  <!-- Flame Glow Aura -->
+  <circle cx="32" cy="18" r="14" fill="url(#flameGlow)" opacity="0.6"/>
+  <!-- Flame -->
+  <path d="M32 8 C35 15 38 20 35 24 C32 27 29 24 29 20 C29 16 32 8 32 8 Z" fill="#FFA500" stroke="#FFE79A" stroke-width="1"/>
+  <path d="M32 12 C33.5 16 35 19 33.5 22 C32 24 30.5 22 30.5 19 C30.5 16 32 12 32 12 Z" fill="#FFE79A"/>
+  <!-- Diya Bowl -->
+  <path d="M12 36 C14 46 22 52 32 52 C42 52 50 46 52 36 C52 34 12 34 12 36 Z" fill="url(#brassLamp)" stroke="#B5965A" stroke-width="1.5"/>
+  <!-- Diya Rim and Spout -->
+  <ellipse cx="32" cy="35" rx="20" ry="4" fill="#8F6F33" stroke="#F2DFAB" stroke-width="1"/>
+  <!-- Base Stand -->
+  <path d="M26 52 L22 58 C22 59 42 59 42 58 L38 52 Z" fill="url(#brassLamp)" stroke="#B5965A" stroke-width="1"/>
+</svg>

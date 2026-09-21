@@ -1,0 +1,21 @@
+@import './styles/global.css';
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.wedding-body {
+  font-family: 'Outfit', sans-serif;
+  background: var(--color-ivory);
+  color: var(--color-dark-text);
+}
+
+.invitation-main {
+  padding-top: 80px;
+}

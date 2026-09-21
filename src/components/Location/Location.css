@@ -1,0 +1,214 @@
+.location-section {
+  padding: 80px 2rem;
+  background: linear-gradient(135deg, #FFF0F5 0%, #FFE4E1 100%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  margin-bottom: 4rem;
+}
+
+.section-tagline {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.9rem;
+  color: #9E0F0F;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #6E1014;
+  margin-bottom: 1rem;
+}
+
+.gold-divider-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.gold-line {
+  height: 2px;
+  width: 80px;
+  background: linear-gradient(90deg, transparent, #C79A3B, transparent);
+}
+
+.gold-motif {
+  font-size: 1.8rem;
+  color: #C79A3B;
+}
+
+.section-subtitle {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.1rem;
+  color: #3A1717;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.location-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.venue-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid #C79A3B;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.venue-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.venue-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #6E1014;
+  margin-bottom: 0.5rem;
+}
+
+.venue-location {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.1rem;
+  color: #9E0F0F;
+  font-style: italic;
+}
+
+.venue-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.venue-detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.detail-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.detail-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.detail-label {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.85rem;
+  color: #6E1014;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.detail-value {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1rem;
+  color: #3A1717;
+  line-height: 1.4;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  justify-content: center;
+  width: 100%;
+}
+
+.btn-primary {
+  background: #9E0F0F;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #6E1014;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(158, 15, 15, 0.4);
+}
+
+.map-placeholder {
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid #C79A3B;
+  border-radius: 16px;
+  overflow: hidden;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.map-content {
+  text-align: center;
+  padding: 2rem;
+}
+
+.map-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.map-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: #6E1014;
+  margin-bottom: 0.5rem;
+}
+
+.map-subtext {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1rem;
+  color: #9E0F0F;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .location-content {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .venue-name {
+    font-size: 1.5rem;
+  }
+
+  .map-placeholder {
+    min-height: 250px;
+  }
+}

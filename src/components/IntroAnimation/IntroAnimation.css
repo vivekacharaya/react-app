@@ -1,0 +1,634 @@
+/* Intro Animation Luxury Styles */
+
+.intro-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle at center, #FFF9F4 0%, #FBF0E4 50%, #F5DEB3 100%);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  opacity: 1;
+  transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.intro-overlay.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.intro-backdrop {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.mandala-bg-left {
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(199, 154, 59, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  border: 1px dashed rgba(199, 154, 59, 0.25);
+  animation: slowSpin 40s linear infinite;
+}
+
+.mandala-bg-right {
+  position: absolute;
+  bottom: -100px;
+  right: -100px;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(168, 95, 103, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  border: 1px dashed rgba(168, 95, 103, 0.25);
+  animation: slowSpinReverse 45s linear infinite;
+}
+
+.intro-glow-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(199, 154, 59, 0.12) 0%, rgba(255, 249, 244, 0) 70%);
+  filter: blur(40px);
+}
+
+.intro-stage-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  z-index: 10;
+  text-align: center;
+}
+
+.intro-mantra-badge {
+  background: rgba(199, 154, 59, 0.12);
+  border: 1px solid rgba(199, 154, 59, 0.35);
+  border-radius: 30px;
+  padding: 6px 20px;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 4px 15px rgba(199, 154, 59, 0.1);
+  animation: fadeInDown 0.8s ease forwards;
+}
+
+.mantra-sanskrit {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #8B1E2F;
+}
+
+.intro-brand-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3.8rem;
+  color: #8B1E2F;
+  margin: 0;
+  line-height: 1.1;
+  text-shadow: 0 2px 10px rgba(139, 30, 47, 0.15);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.intro-brand-tagline {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #C79A3B;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Central Cinematic Canvas */
+.cinematic-canvas {
+  position: relative;
+  width: 100%;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+/* STAGE 1 & 2: HEARTS */
+.hearts-stage {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 260px;
+  opacity: 0;
+  transform: scale(0.85);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hearts-stage.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.heart-left-wrapper,
+.heart-right-wrapper {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  transition: all 1.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.heart-left-wrapper {
+  transform: translateX(-160px) rotate(-10deg);
+}
+
+.heart-right-wrapper {
+  transform: translateX(160px) rotate(10deg);
+}
+
+.hearts-stage.merged .heart-left-wrapper {
+  transform: translateX(-15px) scale(0.6) rotate(0deg);
+  opacity: 0;
+}
+
+.hearts-stage.merged .heart-right-wrapper {
+  transform: translateX(15px) scale(0.6) rotate(0deg);
+  opacity: 0;
+}
+
+.heart-svg {
+  width: 75px;
+  height: 75px;
+  fill: #8B1E2F;
+  filter: drop-shadow(0 6px 15px rgba(139, 30, 47, 0.35));
+  animation: pulseHeart 1.5s ease-in-out infinite;
+}
+
+.heart-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #8B1E2F;
+  letter-spacing: 1px;
+}
+
+.united-golden-heart {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: goldenHeartEntrance 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.heart-gold-svg {
+  width: 110px;
+  height: 110px;
+  fill: url(#goldGradient) #C79A3B;
+  filter: drop-shadow(0 0 25px rgba(199, 154, 59, 0.8));
+}
+
+.united-burst {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 2px solid rgba(199, 154, 59, 0.6);
+  animation: burstRing 1.2s ease-out forwards;
+}
+
+/* STAGE 3-6: COUPLE CEREMONY */
+.couple-ceremony-stage {
+  position: relative;
+  width: 100%;
+  max-width: 750px;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+/* Families in Background */
+.families-bg-layer {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 40px;
+  opacity: 0;
+  transform: translateY(-20px) scale(0.9);
+  transition: all 1s ease;
+  z-index: 1;
+}
+
+.families-bg-layer.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.family-sharma-bg,
+.family-verma-bg {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(199, 154, 59, 0.3);
+  border-radius: 12px;
+  padding: 8px 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.family-tag {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #8B1E2F;
+}
+
+.family-silhouette-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* Couple Persons */
+.couple-person {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 5;
+}
+
+.bride-entry {
+  transform: translateX(-120px) scale(0.85);
+}
+
+.groom-entry {
+  transform: translateX(120px) scale(0.85);
+}
+
+.bride-entry.entered,
+.groom-entry.entered {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+}
+
+.avatar-ring {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  padding: 6px;
+  background: linear-gradient(135deg, #C79A3B 0%, #FFF3D6 50%, #B5965A 100%);
+  box-shadow: 0 10px 25px rgba(139, 30, 47, 0.25);
+}
+
+.person-intro-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #FFF9F4;
+}
+
+.person-intro-details {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.role-tag {
+  display: block;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #C79A3B;
+}
+
+.person-intro-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.35rem;
+  color: #8B1E2F;
+  margin: 2px 0 0 0;
+}
+
+/* Varmala Garland Animation */
+.varmala {
+  position: absolute;
+  top: -15px;
+  font-size: 1.3rem;
+  opacity: 0;
+  transform: translateY(-40px);
+  transition: all 1s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.varmala.exchanged {
+  opacity: 1;
+  transform: translateY(25px) scale(1.1);
+}
+
+/* Center Mandap & Flower Blooms */
+.mandap-center-motif {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 3;
+}
+
+.mandap-center-motif.bloom {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.vivaha-mandap-icon {
+  font-size: 2.5rem;
+  filter: drop-shadow(0 4px 10px rgba(199, 154, 59, 0.4));
+}
+
+.flower-petal-burst {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+}
+
+.petal {
+  position: absolute;
+  font-size: 1.2rem;
+  animation: floatPetal 3s ease-in-out infinite alternate;
+}
+
+.petal.p1 { top: -20px; left: 20px; animation-delay: 0s; }
+.petal.p2 { top: -15px; right: 10px; animation-delay: 0.3s; }
+.petal.p3 { bottom: -20px; left: 15px; animation-delay: 0.6s; }
+.petal.p4 { bottom: -15px; right: 20px; animation-delay: 0.9s; }
+.petal.p5 { top: 40px; left: -25px; animation-delay: 1.2s; }
+.petal.p6 { top: 40px; right: -25px; animation-delay: 1.5s; }
+
+/* STAGE 7: WELCOME BANNER */
+.welcome-banner-stage {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+  z-index: 15;
+}
+
+.welcome-banner-stage.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.welcome-families-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-style: italic;
+  font-weight: 600;
+  color: #8B1E2F;
+  margin: 0;
+  text-shadow: 0 2px 5px rgba(255, 255, 255, 0.9);
+}
+
+.welcome-date-badge {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #C79A3B;
+  font-weight: 600;
+  margin-top: 6px;
+}
+
+/* STAGE 8: ENVELOPE CARD */
+.invitation-opening-envelope {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 249, 244, 0.95);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  border: 2px solid #C79A3B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 20px 50px rgba(139, 30, 47, 0.2);
+  animation: cardUnfold 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  z-index: 20;
+}
+
+.envelope-card-outer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2.5rem;
+}
+
+.envelope-seal {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #C79A3B 0%, #8B1E2F 100%);
+  color: #FFF9F4;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 6px 20px rgba(199, 154, 59, 0.5);
+  animation: spinSeal 1.5s ease;
+}
+
+.envelope-text h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: #8B1E2F;
+  margin-bottom: 0.5rem;
+}
+
+.envelope-text p {
+  font-family: 'Outfit', sans-serif;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.loading-gold-bar {
+  width: 220px;
+  height: 4px;
+  background: rgba(199, 154, 59, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.loading-gold-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, #C79A3B, #8B1E2F);
+  animation: loadProgress 1.8s ease-in-out infinite;
+}
+
+/* Step Indicators */
+.intro-step-indicators {
+  display: flex;
+  gap: 8px;
+  margin-top: 1.5rem;
+}
+
+.step-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(199, 154, 59, 0.25);
+  transition: all 0.4s ease;
+}
+
+.step-dot.active {
+  width: 24px;
+  border-radius: 4px;
+  background: #C79A3B;
+}
+
+/* Skip Button */
+.intro-skip-btn {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  background: rgba(139, 30, 47, 0.9);
+  backdrop-filter: blur(6px);
+  color: #FFF9F4;
+  border: 1px solid rgba(199, 154, 59, 0.4);
+  border-radius: 30px;
+  padding: 8px 18px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  z-index: 100;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.intro-skip-btn:hover {
+  background: #8B1E2F;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 30, 47, 0.35);
+}
+
+/* Keyframes */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slowSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes slowSpinReverse {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+
+@keyframes pulseHeart {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+@keyframes goldenHeartEntrance {
+  0% { transform: scale(0.2); opacity: 0; }
+  60% { transform: scale(1.3); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes burstRing {
+  0% { transform: scale(0.5); opacity: 1; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+
+@keyframes floatPetal {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(-12px) rotate(20deg); }
+}
+
+@keyframes cardUnfold {
+  0% { transform: scale(0.6) rotateX(20deg); opacity: 0; }
+  100% { transform: scale(1) rotateX(0deg); opacity: 1; }
+}
+
+@keyframes spinSeal {
+  0% { transform: scale(0) rotate(-180deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+@keyframes loadProgress {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@media (max-width: 768px) {
+  .intro-brand-title {
+    font-size: 2.6rem;
+  }
+  .couple-ceremony-stage {
+    flex-direction: column;
+    height: 380px;
+    justify-content: center;
+    gap: 15px;
+  }
+  .avatar-ring {
+    width: 90px;
+    height: 90px;
+  }
+  .welcome-families-text {
+    font-size: 1.2rem;
+  }
+  .mandap-center-motif {
+    margin: 5px 0;
+  }
+  .families-bg-layer {
+    padding: 0 10px;
+    top: -10px;
+  }
+}

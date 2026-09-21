@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="paisleyGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E5D193"/>
+      <stop offset="50%" stop-color="#B5965A"/>
+      <stop offset="100%" stop-color="#82464E"/>
+    </linearGradient>
+  </defs>
+  <path d="M32 6 C20 6 12 18 12 32 C12 46 22 56 36 56 C50 56 56 42 52 30 C48 18 36 20 34 14 C32 8 38 7 32 6 Z" 
+        fill="#F4E2E1" fill-opacity="0.5" stroke="url(#paisleyGold)" stroke-width="1.8"/>
+  <!-- Inner Motif -->
+  <path d="M30 18 C22 20 18 28 18 36 C18 44 24 50 34 50 C42 50 46 40 44 32 C41 24 33 26 31 20 Z" 
+        fill="#A85F67" fill-opacity="0.2" stroke="#B5965A" stroke-width="1"/>
+  <circle cx="30" cy="36" r="4" fill="#B5965A"/>
+  <circle cx="30" cy="36" r="2" fill="#FFF9F4"/>
+</svg>

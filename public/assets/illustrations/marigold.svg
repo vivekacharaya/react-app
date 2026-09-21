@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <radialGradient id="marigoldGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFD166"/>
+      <stop offset="40%" stop-color="#E88B24"/>
+      <stop offset="85%" stop-color="#B5965A"/>
+      <stop offset="100%" stop-color="#82464E"/>
+    </radialGradient>
+  </defs>
+  <g transform="translate(32,32)">
+    <!-- Layer 1 -->
+    <g fill="url(#marigoldGrad)" stroke="#B5965A" stroke-width="0.8">
+      <circle cx="0" cy="-18" r="7" />
+      <circle cx="12.7" cy="-12.7" r="7" />
+      <circle cx="18" cy="0" r="7" />
+      <circle cx="12.7" cy="12.7" r="7" />
+      <circle cx="0" cy="18" r="7" />
+      <circle cx="-12.7" cy="12.7" r="7" />
+      <circle cx="-18" cy="0" r="7" />
+      <circle cx="-12.7" cy="-12.7" r="7" />
+    </g>
+    <!-- Layer 2 -->
+    <g fill="#FFAA00" stroke="#B5965A" stroke-width="0.8" opacity="0.95">
+      <circle cx="0" cy="-10" r="5" />
+      <circle cx="7" cy="-7" r="5" />
+      <circle cx="10" cy="0" r="5" />
+      <circle cx="7" cy="7" r="5" />
+      <circle cx="0" cy="10" r="5" />
+      <circle cx="-7" cy="7" r="5" />
+      <circle cx="-10" cy="0" r="5" />
+      <circle cx="-7" cy="-7" r="5" />
+    </g>
+    <!-- Center core -->
+    <circle cx="0" cy="0" r="6" fill="#82464E" stroke="#FFD166" stroke-width="1.2"/>
+    <circle cx="0" cy="0" r="3" fill="#FFD166"/>
+  </g>
+</svg>

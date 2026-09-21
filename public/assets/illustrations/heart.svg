@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <radialGradient id="heartGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F4E2E1" stop-opacity="0.9"/>
+      <stop offset="70%" stop-color="#A85F67" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#82464E" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="goldHeartGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E5D193"/>
+      <stop offset="50%" stop-color="#B5965A"/>
+      <stop offset="100%" stop-color="#8F6F33"/>
+    </linearGradient>
+    <linearGradient id="roseHeartGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C27A83"/>
+      <stop offset="50%" stop-color="#A85F67"/>
+      <stop offset="100%" stop-color="#65383D"/>
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Aura glow -->
+  <circle cx="50" cy="50" r="45" fill="url(#heartGlow)" filter="url(#softGlow)"/>
+
+  <!-- Outer ornamental gold filigree ring -->
+  <circle cx="50" cy="50" r="42" fill="none" stroke="url(#goldHeartGrad)" stroke-width="1" stroke-dasharray="2 3" opacity="0.6"/>
+
+  <!-- Main Heart Shape -->
+  <path d="M50 82 C50 82 18 60 18 36 C18 23 28 14 40 14 C46 14 50 18 50 18 C50 18 54 14 60 14 C72 14 82 23 82 36 C82 60 50 82 50 82 Z"
+        fill="url(#roseHeartGrad)" stroke="url(#goldHeartGrad)" stroke-width="1.8"/>
+
+  <!-- Inner delicate contour -->
+  <path d="M50 75 C50 75 25 56 25 37 C25 27 32 20 41 20 C46 20 49 23 50 24 C51 23 54 20 59 20 C68 20 75 27 75 37 C75 56 50 75 50 75 Z"
+        fill="none" stroke="url(#goldHeartGrad)" stroke-width="0.8" opacity="0.75"/>
+
+  <!-- Center Traditional Lotus / Floral motif inside heart -->
+  <g transform="translate(50, 42) scale(0.4)" stroke="url(#goldHeartGrad)" fill="none" stroke-width="1.5">
+    <path d="M0 25 C-15 15 -25 0 -25 -15 C-15 -10 0 0 0 10 C0 0 15 -10 25 -15 C25 0 15 15 0 25 Z" fill="#FFF9F4" fill-opacity="0.25"/>
+    <path d="M0 20 C-10 10 -15 -5 0 -22 C15 -5 10 10 0 20 Z" fill="url(#goldHeartGrad)" fill-opacity="0.4"/>
+    <circle cx="0" cy="-2" r="3" fill="#E5D193"/>
+  </g>
+</svg>

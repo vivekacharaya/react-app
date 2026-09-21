@@ -1,0 +1,680 @@
+/* VARMALA (JAIMALA) CEREMONY COMPONENT STYLES */
+
+.varmala-ceremony-section {
+  position: relative;
+  padding: 5rem 1.5rem 6rem;
+  background: radial-gradient(circle at 50% 20%, #FFF8F0 0%, #FDF0E2 60%, #F8E4D0 100%);
+  overflow: hidden;
+  border-top: 1px solid rgba(199, 154, 59, 0.25);
+  border-bottom: 1px solid rgba(199, 154, 59, 0.25);
+}
+
+.varmala-container {
+  max-width: 1050px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 5;
+}
+
+/* MANDAP BACKGROUND ORNAMENTS & HANGING MARIGOLDS */
+.varmala-bg-ornaments {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.mandap-top-toran {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  z-index: 2;
+}
+
+.hanging-marigold-row {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.marigold-string {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  animation: gentleSway 4s ease-in-out infinite alternate;
+  transform-origin: top center;
+}
+
+.flower-drop {
+  font-size: 1.1rem;
+  filter: drop-shadow(0 2px 4px rgba(139, 30, 47, 0.2));
+}
+
+.flower-drop.bell {
+  font-size: 0.9rem;
+  color: #C79A3B;
+}
+
+@keyframes gentleSway {
+  0% { transform: rotate(-4deg); }
+  100% { transform: rotate(4deg); }
+}
+
+/* HEADER BADGE */
+.shubh-vivaha-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, rgba(139, 30, 47, 0.12) 0%, rgba(199, 154, 59, 0.18) 100%);
+  border: 1px solid rgba(199, 154, 59, 0.5);
+  padding: 6px 22px;
+  border-radius: 30px;
+  color: #8B1E2F;
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 0.8rem;
+  box-shadow: 0 4px 15px rgba(199, 154, 59, 0.15);
+}
+
+.varmala-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  color: #8B1E2F;
+  margin: 0 0 0.8rem;
+  font-weight: 700;
+}
+
+.varmala-subtitle {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.05rem;
+  color: #5A4A42;
+  max-width: 680px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.6;
+}
+
+.gold-mandala-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+.gold-mandala-divider::before,
+.gold-mandala-divider::after {
+  content: '';
+  width: 100px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #C79A3B, transparent);
+}
+
+.mandala-icon {
+  font-size: 1.5rem;
+  color: #C79A3B;
+  padding: 0 15px;
+}
+
+/* STAGE CARD FRAME */
+.varmala-stage-card {
+  position: relative;
+  background: rgba(255, 253, 250, 0.94);
+  backdrop-filter: blur(12px);
+  border: 2px solid rgba(199, 154, 59, 0.4);
+  border-radius: 24px;
+  padding: 3rem 2rem 2.5rem;
+  box-shadow: 0 25px 60px rgba(139, 30, 47, 0.12), inset 0 0 40px rgba(253, 238, 222, 0.5);
+  overflow: hidden;
+}
+
+.varmala-stage-card::before {
+  content: '';
+  position: absolute;
+  inset: 8px;
+  border: 1px dashed rgba(199, 154, 59, 0.4);
+  border-radius: 18px;
+  pointer-events: none;
+}
+
+/* MANDAP DIYAS & HAVAN KUND */
+.mandap-diyas-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  padding: 0 1rem;
+}
+
+.traditional-diya {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.diya-body {
+  font-size: 2.2rem;
+  filter: drop-shadow(0 0 8px rgba(255, 180, 0, 0.8));
+  animation: diyaPulse 2s ease-in-out infinite alternate;
+}
+
+.diya-aura {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 200, 50, 0.4) 0%, transparent 70%);
+  animation: flameFlicker 1.8s infinite;
+}
+
+.sacred-havan-kund {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(199, 154, 59, 0.12);
+  border: 1px solid rgba(199, 154, 59, 0.35);
+  padding: 6px 16px;
+  border-radius: 20px;
+}
+
+.agni-flame {
+  font-size: 1.8rem;
+  animation: agniBurn 1.5s infinite alternate ease-in-out;
+}
+
+.kund-label {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.75rem;
+  color: #8B1E2F;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+@keyframes diyaPulse {
+  0% { transform: scale(0.96); }
+  100% { transform: scale(1.04); }
+}
+
+@keyframes flameFlicker {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.15); }
+}
+
+@keyframes agniBurn {
+  0% { transform: translateY(0) scale(0.95); }
+  100% { transform: translateY(-3px) scale(1.08); filter: drop-shadow(0 0 12px rgba(255, 100, 0, 0.8)); }
+}
+
+/* COUPLE VARMALA ARENA */
+.couple-varmala-arena {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 2rem;
+  max-width: 850px;
+  margin: 0 auto 2.5rem;
+  position: relative;
+}
+
+.couple-character {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.couple-character.garland-action {
+  transform: scale(1.05);
+}
+
+.character-portrait-arch {
+  position: relative;
+  width: 220px;
+  height: 290px;
+  border-radius: 110px 110px 20px 20px;
+  overflow: visible;
+  border: 4px solid #FFF;
+  outline: 2px solid #C79A3B;
+  box-shadow: 0 15px 35px rgba(139, 30, 47, 0.18);
+  background: #F8E4D0;
+}
+
+.bridal-halo, .groom-halo {
+  position: absolute;
+  inset: -12px;
+  border-radius: 120px 120px 30px 30px;
+  background: radial-gradient(circle, rgba(199, 154, 59, 0.25) 0%, transparent 70%);
+  pointer-events: none;
+  animation: haloBreathe 3s ease-in-out infinite alternate;
+}
+
+@keyframes haloBreathe {
+  0% { opacity: 0.5; transform: scale(0.98); }
+  100% { opacity: 1; transform: scale(1.03); }
+}
+
+.varmala-portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 106px 106px 16px 16px;
+  display: block;
+}
+
+/* WORN FLORAL GARLAND (VARMALA) */
+.garland-worn {
+  position: absolute;
+  top: 90px;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+  opacity: 0;
+  width: 160px;
+  pointer-events: none;
+  transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+  z-index: 10;
+}
+
+.garland-worn.garland-placed {
+  transform: translateX(-50%) scale(1);
+  opacity: 1;
+}
+
+.royal-garland-svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(4px);
+  padding: 6px 12px;
+  border-radius: 30px;
+  border: 1.5px solid #C79A3B;
+  box-shadow: 0 6px 20px rgba(139, 30, 47, 0.35);
+  animation: garlandGlow 2.5s infinite alternate ease-in-out;
+}
+
+.g-flower {
+  font-size: 1.2rem;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+}
+
+@keyframes garlandGlow {
+  0% { box-shadow: 0 4px 15px rgba(199, 154, 59, 0.3); }
+  100% { box-shadow: 0 6px 25px rgba(224, 138, 148, 0.6), 0 0 15px rgba(199, 154, 59, 0.5); }
+}
+
+/* FLYING VARMALA ARC ANIMATION */
+.flying-varmala {
+  position: absolute;
+  top: 50px;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+}
+
+.flying-varmala.arc-to-right {
+  left: 120px;
+  animation: flyToGroom 1.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.flying-varmala.arc-to-left {
+  right: 120px;
+  animation: flyToBride 1.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.garland-floral-chain {
+  background: rgba(255, 253, 250, 0.95);
+  border: 2px solid #C79A3B;
+  padding: 6px 14px;
+  border-radius: 30px;
+  box-shadow: 0 10px 30px rgba(139, 30, 47, 0.4);
+  font-size: 1.3rem;
+  animation: rotateGarland 1.8s ease-in-out;
+}
+
+.varmala-caption {
+  margin-top: 8px;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #8B1E2F;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2px 10px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+@keyframes flyToGroom {
+  0% {
+    transform: translate(0, 0) scale(0.5) rotate(-15deg);
+    opacity: 0;
+  }
+  30% {
+    transform: translate(120px, -60px) scale(1.15) rotate(10deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(360px, 30px) scale(1) rotate(0deg);
+    opacity: 0;
+  }
+}
+
+@keyframes flyToBride {
+  0% {
+    transform: translate(0, 0) scale(0.5) rotate(15deg);
+    opacity: 0;
+  }
+  30% {
+    transform: translate(-120px, -60px) scale(1.15) rotate(-10deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-360px, 30px) scale(1) rotate(0deg);
+    opacity: 0;
+  }
+}
+
+/* CHARACTER NAME PILL */
+.character-title-pill {
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #8B1E2F;
+  color: #FFF;
+  padding: 6px 18px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  white-space: nowrap;
+  border: 1px solid #C79A3B;
+  box-shadow: 0 4px 15px rgba(139, 30, 47, 0.3);
+  z-index: 12;
+}
+
+.character-title-pill.groom-pill {
+  background: #3D2B1F;
+}
+
+.character-title-pill .name {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: #FFF5DB;
+}
+
+.character-title-pill .role {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 1px;
+  color: #E5D193;
+}
+
+/* CENTRAL SACRED BOND */
+.central-sacred-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.sacred-knot-gathbandhan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.6s ease;
+}
+
+.gathbandhan-silk {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(139, 30, 47, 0.1);
+  border: 1px solid rgba(139, 30, 47, 0.3);
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-family: 'Playfair Display', serif;
+  font-size: 0.85rem;
+  color: #8B1E2F;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.knot-symbol {
+  font-size: 1.1rem;
+}
+
+.golden-union-heart {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pulse-heart-svg {
+  width: 42px;
+  height: 42px;
+  fill: #8B1E2F;
+  filter: drop-shadow(0 0 10px rgba(199, 154, 59, 0.8));
+  animation: heartPulseAnimation 1.5s infinite;
+}
+
+.sacred-knot-gathbandhan.knot-tied .pulse-heart-svg {
+  fill: #C79A3B;
+  animation: heartPulseAnimation 0.8s infinite;
+}
+
+@keyframes heartPulseAnimation {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* CELEBRATION TOAST BANNER */
+.ceremony-toast-banner {
+  background: linear-gradient(135deg, rgba(255, 245, 235, 0.95) 0%, rgba(253, 238, 222, 0.95) 100%);
+  border: 1px solid rgba(199, 154, 59, 0.45);
+  border-radius: 16px;
+  padding: 1.2rem 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 25px rgba(139, 30, 47, 0.08);
+  opacity: 0;
+  transform: translateY(15px);
+  transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.ceremony-toast-banner.toast-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.toast-mantra-highlight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.toast-mantra-highlight .swastik {
+  color: #8B1E2F;
+  font-size: 1.2rem;
+}
+
+.toast-mantra-highlight .mantra-line {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  color: #8B1E2F;
+  font-weight: 700;
+  margin: 0;
+}
+
+.toast-translation {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.95rem;
+  color: #5A4A42;
+  font-style: italic;
+  margin: 0.4rem 0 0.6rem;
+}
+
+.toast-family-cheer {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.85rem;
+  color: #C79A3B;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* BURSTING FLOWER PETAL RAIN */
+.ceremony-petal-rain {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 40;
+}
+
+.burst-petal {
+  position: absolute;
+  top: -30px;
+  font-size: 1.6rem;
+  animation: fallPetalRain linear infinite;
+}
+
+@keyframes fallPetalRain {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(650px) rotate(360deg) scale(1.2);
+    opacity: 0;
+  }
+}
+
+/* INTERACTIVE CONTROL CENTER */
+.varmala-interactive-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.ceremony-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 26px;
+  border-radius: 30px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border: 1px solid transparent;
+}
+
+.primary-varmala-btn {
+  background: linear-gradient(135deg, #8B1E2F 0%, #A82E40 100%);
+  color: #FFF;
+  box-shadow: 0 6px 20px rgba(139, 30, 47, 0.35);
+}
+
+.primary-varmala-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(139, 30, 47, 0.5);
+  background: linear-gradient(135deg, #701423 0%, #8B1E2F 100%);
+}
+
+.primary-varmala-btn.animating {
+  animation: btnPulse 1s infinite alternate;
+}
+
+@keyframes btnPulse {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.04); }
+}
+
+.flower-shower-btn {
+  background: rgba(255, 255, 255, 0.9);
+  color: #8B1E2F;
+  border-color: #C79A3B;
+  box-shadow: 0 4px 15px rgba(199, 154, 59, 0.2);
+}
+
+.flower-shower-btn:hover {
+  background: #FFF5DB;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(199, 154, 59, 0.35);
+}
+
+.diya-bless-btn {
+  background: linear-gradient(135deg, #C79A3B 0%, #B5965A 100%);
+  color: #FFF;
+  box-shadow: 0 6px 20px rgba(199, 154, 59, 0.35);
+}
+
+.diya-bless-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(199, 154, 59, 0.5);
+}
+
+.diya-bless-btn.blessed {
+  background: #4E7C59;
+  border-color: #4E7C59;
+}
+
+.bless-counter-badge {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+}
+
+/* RESPONSIVE STYLES */
+@media (max-width: 868px) {
+  .varmala-title {
+    font-size: 2.2rem;
+  }
+
+  .couple-varmala-arena {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+
+  .character-portrait-arch {
+    width: 200px;
+    height: 260px;
+  }
+
+  .flying-varmala.arc-to-right,
+  .flying-varmala.arc-to-left {
+    display: none; /* simpler animation on mobile */
+  }
+
+  .varmala-stage-card {
+    padding: 2rem 1rem;
+  }
+
+  .varmala-interactive-controls {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .ceremony-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
